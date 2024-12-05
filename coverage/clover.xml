@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733307071164" clover="3.2.0">
-  <project timestamp="1733307071165" name="All files">
-    <metrics statements="66" coveredstatements="4" conditionals="21" coveredconditionals="1" methods="35" coveredmethods="3" elements="122" coveredelements="8" complexity="0" loc="66" ncloc="66" packages="4" files="18" classes="18"/>
+<coverage generated="1733392212223" clover="3.2.0">
+  <project timestamp="1733392212223" name="All files">
+    <metrics statements="66" coveredstatements="6" conditionals="21" coveredconditionals="1" methods="35" coveredmethods="5" elements="122" coveredelements="12" complexity="0" loc="66" ncloc="66" packages="4" files="18" classes="18"/>
     <package name="src">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="App.jsx" path="D:\GitHub\spa-testing\src\App.jsx">
@@ -27,7 +27,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="19" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="1"/>
+      <metrics statements="19" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="3"/>
       <file name="CategoryItem.jsx" path="D:\GitHub\spa-testing\src\components\CategoryItem.jsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
@@ -39,8 +39,8 @@
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="Footer.jsx" path="D:\GitHub\spa-testing\src\components\Footer.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
       <file name="Header.jsx" path="D:\GitHub\spa-testing\src\components\Header.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -57,8 +57,8 @@
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="Preloader.jsx" path="D:\GitHub\spa-testing\src\components\Preloader.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
       <file name="Search.jsx" path="D:\GitHub\spa-testing\src\components\Search.jsx">
         <metrics statements="8" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
