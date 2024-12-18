@@ -3,44 +3,42 @@ import userEvent from "@testing-library/user-event";
 
 import { Search } from "../Search";
 
+describe("Search", () => {
+  test("should render Search component", () => {
+    render(<Search />);
 
-describe('Search', () => {
-	test('should render Search component', () => {
-		render(<Search />)
+    expect(screen.getByRole("searchbox")).toBeInTheDocument();
+    expect(screen.getByRole("button")).toBeInTheDocument();
+  });
 
-		expect(screen.getByRole('searchbox')).toBeInTheDocument();
-		expect(screen.getByRole('button')).toBeInTheDocument();
-	})
+  test("should handle input change", async () => {
+    render(<Search />);
 
-	test('should handle input change', async () => {
-		render(<Search />);
+    const input = screen.getByRole("searchbox");
+    await userEvent.type(input, "chicken");
+    expect(input).toHaveValue("chicken");
+  });
 
-		const input = screen.getByRole('searchbox');
-		await userEvent.type(input, 'chicken');
-		expect(input).toHaveValue('chicken');
-	})
+  test("should handle form submit", async () => {
+    const cb = jest.fn();
+    render(<Search cb={cb} />);
 
-	test('should handle form submit', async () => {
-		const cb = jest.fn();
-		render(<Search cb={cb} />);
+    const input = screen.getByRole("searchbox");
+    const button = screen.getByRole("button");
 
-		const input = screen.getByRole('searchbox');
-		const button = screen.getByRole('button');
+    await userEvent.type(input, "chicken");
+    await userEvent.click(button);
+    expect(cb).toHaveBeenCalledWith("chicken");
+  });
 
-		await userEvent.type(input, 'chicken');
-		await userEvent.click(button);
-		expect(cb).toHaveBeenCalledWith('chicken');
-	})
+  test('should handle "Enter" key press', async () => {
+    const cb = jest.fn();
+    render(<Search cb={cb} />);
 
-	test('should handle "Enter" key press', async () => {
-		const cb = jest.fn();
-		render(<Search cb={cb} />);
+    const input = screen.getByRole("searchbox");
 
-		const input = screen.getByRole('searchbox');
+    await userEvent.type(input, "chicken{enter}");
 
-
-		await userEvent.type(input, 'chicken{enter}');
-
-		expect(cb).toHaveBeenCalledWith('chicken');
-	})
-})
+    expect(cb).toHaveBeenCalledWith("chicken");
+  });
+});

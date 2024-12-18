@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
-import { getAllCategories } from '../api';
-import { Preloader } from '../components/Preloader';
-import { CategoryList } from '../components/CategoryList';
-import { Search } from '../components/Search';
+import { useState, useEffect } from "react";
+import { useLocation, useHistory } from "react-router-dom";
+import { getAllCategories } from "../api";
+import { Preloader } from "../components/Preloader";
+import { CategoryList } from "../components/CategoryList";
+import { Search } from "../components/Search";
 
 function Home() {
   const [catalog, setCatalog] = useState([]);
@@ -32,7 +32,7 @@ function Home() {
           ? data.categories.filter((item) =>
               item.strCategory
                 .toLowerCase()
-                .includes(search.split('=')[1].toLowerCase()),
+                .includes(search.split("=")[1].toLowerCase()),
             )
           : data.categories,
       );

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -139,17 +139,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,15 +166,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -208,16 +208,16 @@ import { useParams, useHistory } from 'react-router-dom';
 import { getMealById } from '../api';
 import { Preloader } from '../components/Preloader';
 &nbsp;
-function <span class="fstat-no" title="function not covered" >Recipe(</span>) {
-  const [recipe, setRecipe] = <span class="cstat-no" title="statement not covered" >useState({});</span>
-  const { id } = <span class="cstat-no" title="statement not covered" >useParams();</span>
-  const { goBack } = <span class="cstat-no" title="statement not covered" >useHistory();</span>
+function Recipe() {
+  const [recipe, setRecipe] = useState({});
+  const { id } = useParams();
+  const { goBack } = useHistory();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    getMealById(id).then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; <span class="cstat-no" title="statement not covered" >setRecipe(data.meals[0]))</span>;</span>
+  useEffect(() =&gt; {
+    getMealById(id).then((data) =&gt; setRecipe(data.meals[0]));
   }, [id]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;&gt;
       {!recipe.idMeal ? (
         &lt;Preloader /&gt;
@@ -226,7 +226,7 @@ function <span class="fstat-no" title="function not covered" >Recipe(</span>) {
           &lt;img src={recipe.strMealThumb} alt={recipe.strMeal} /&gt;
           &lt;h1&gt;{recipe.strMeal}&lt;/h1&gt;
           &lt;h6&gt;Category: {recipe.strCategory}&lt;/h6&gt;
-          {recipe.strArea ? &lt;h6&gt;Area: {recipe.strArea}&lt;/h6&gt; : null}
+          {recipe.strArea ? &lt;h6&gt;Area: {recipe.strArea}&lt;/h6&gt; : <span class="branch-1 cbranch-no" title="branch not covered" >null}</span>
           &lt;p&gt;{recipe.strInstructions}&lt;/p&gt;
 &nbsp;
           &lt;table className="centered"&gt;
@@ -237,16 +237,16 @@ function <span class="fstat-no" title="function not covered" >Recipe(</span>) {
               &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;
-              {Object.keys(recipe).map(<span class="fstat-no" title="function not covered" >(k</span>ey) =&gt; {
-<span class="cstat-no" title="statement not covered" >                if (key.includes('Ingredient') &amp;&amp; recipe[key]) {</span>
-<span class="cstat-no" title="statement not covered" >                  return (</span>
+              {Object.keys(recipe).map((key) =&gt; {
+                if (key.includes('Ingredient') &amp;&amp; recipe[key]) {
+                  return (
                     &lt;tr key={key}&gt;
                       &lt;td&gt;{recipe[key]}&lt;/td&gt;
                       &lt;td&gt;{recipe[`strMeasure${key.slice(13)}`]}&lt;/td&gt;
                     &lt;/tr&gt;
                   );
                 }
-<span class="cstat-no" title="statement not covered" >                return null;</span>
+                return null;
               })}
             &lt;/tbody&gt;
           &lt;/table&gt;
@@ -262,7 +262,7 @@ function <span class="fstat-no" title="function not covered" >Recipe(</span>) {
                 allowFullScreen
               /&gt;
             &lt;/div&gt;
-          ) : null}
+          ) : <span class="branch-1 cbranch-no" title="branch not covered" >null}</span>
         &lt;/div&gt;
       )}
       &lt;button className="btn" onClick={goBack}&gt;
@@ -280,7 +280,7 @@ export { Recipe };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-16T09:23:40.760Z
+                at 2024-12-18T14:27:22.383Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

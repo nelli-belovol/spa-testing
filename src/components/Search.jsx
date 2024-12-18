@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function Search({ cb = Function.prototype }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const handleKey = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSubmit();
     }
   };
@@ -27,7 +27,7 @@ function Search({ cb = Function.prototype }) {
         <button
           className="btn"
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             right: 0,
           }}

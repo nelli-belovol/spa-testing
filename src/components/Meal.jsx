@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Meal(props) {
   const { strMeal, idMeal, strMealThumb } = props;
