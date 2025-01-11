@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1735290415569" clover="3.2.0">
-  <project timestamp="1735290415569" name="All files">
-    <metrics statements="67" coveredstatements="60" conditionals="21" coveredconditionals="21" methods="35" coveredmethods="31" elements="123" coveredelements="112" complexity="0" loc="67" ncloc="67" packages="4" files="18" classes="18"/>
+<coverage generated="1736583858583" clover="3.2.0">
+  <project timestamp="1736583858583" name="All files">
+    <metrics statements="58" coveredstatements="58" conditionals="21" coveredconditionals="21" methods="32" coveredmethods="32" elements="111" coveredelements="111" complexity="0" loc="58" ncloc="58" packages="4" files="17" classes="17"/>
     <package name="src">
-      <metrics statements="12" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="D:\GitHub\spa-testing\src\App.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="13" count="0" type="stmt"/>
-      </file>
-      <file name="api.js" path="D:\GitHub\spa-testing\src\api.js">
-        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="13" count="6" type="stmt"/>
       </file>
       <file name="config.js" path="D:\GitHub\spa-testing\src\config.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -30,7 +18,7 @@
       <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="13"/>
       <file name="CategoryItem.jsx" path="D:\GitHub\spa-testing\src\components\CategoryItem.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="13" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
         <line num="11" count="12" type="stmt"/>
       </file>
       <file name="CategoryList.jsx" path="D:\GitHub\spa-testing\src\components\CategoryList.jsx">
@@ -40,11 +28,11 @@
       </file>
       <file name="Footer.jsx" path="D:\GitHub\spa-testing\src\components\Footer.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
       </file>
       <file name="Header.jsx" path="D:\GitHub\spa-testing\src\components\Header.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
       <file name="Meal.jsx" path="D:\GitHub\spa-testing\src\components\Meal.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -129,10 +117,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="testing.js" path="D:\GitHub\spa-testing\src\utils\testing.js">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="4" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="13" type="stmt"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="9" count="13" type="stmt"/>
+        <line num="4" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="19" type="stmt"/>
+        <line num="6" count="19" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
       </file>
     </package>
   </project>
